@@ -292,7 +292,7 @@ fi
 
 REF=$1
 QUERY=$2
-OUTPUT="${QUERY%.fasta}_aligned.sam"
+OUTPUT="\${QUERY%.fasta}_aligned.sam"
 
 echo "[*] Iniciando alineamiento..."
 echo "[*] Referencia: $REF"
@@ -304,7 +304,7 @@ bwa mem -a $REF $QUERY > $OUTPUT
 echo "[+] Alineamiento completado: $OUTPUT"
 
 # Estadísticas
-samtools flagstat $OUTPUT > "${OUTPUT%.sam}_stats.txt"
+samtools flagstat $OUTPUT > "\${OUTPUT%.sam}_stats.txt"
 echo "[+] Estadísticas guardadas"`
                     },
                     'variant-caller.py': {

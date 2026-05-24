@@ -151,7 +151,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Inicializar terminal
     const terminalOutput = document.getElementById('terminalOutput');
     const terminalInput = document.getElementById('terminalInput');
-    window.terminal = new Terminal(terminalOutput, terminalInput);
+    const terminal = new Terminal(terminalOutput, terminalInput);
+    window.terminal = terminal;
 
     // Mensaje de bienvenida
     terminal.printLine('╔═══════════════════════════════════════╗', 'success');
