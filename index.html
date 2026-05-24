@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espacio de trabajo de Gema R.</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="workspace-container">
+        <!-- Header -->
+        <header class="workspace-header">
+            <div class="header-left">
+                <h1 class="workspace-title">
+                    Espacio de trabajo de <span class="bold-text">Gema R.</span>
+                </h1>
+            </div>
+            <div class="header-right">
+                <div class="countdown-container">
+                    <span class="countdown-label">Tiempo restante:</span>
+                    <span class="countdown-timer" id="countdown">00:00</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="workspace-main">
+            <!-- File System Explorer -->
+            <div class="file-explorer">
+                <div class="explorer-header">
+                    <span class="header-text">📁 Navegador del Sistema</span>
+                    <span class="path-display" id="pathDisplay">/home/gema/workspace</span>
+                </div>
+                
+                <div class="explorer-content" id="explorerContent">
+                    <div class="loading">Cargando sistema de archivos...</div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Terminal -->
+        <footer class="workspace-terminal">
+            <div class="terminal-header">
+                <span class="terminal-title">⌨️  Terminal de Comandos</span>
+            </div>
+            <div class="terminal-output" id="terminalOutput">
+                <div class="terminal-line">Espacio de trabajo de Gema R. - Sistema de Archivos Científicos</div>
+                <div class="terminal-line">Escribe 'ayuda' para ver los comandos disponibles</div>
+                <div class="terminal-line">---</div>
+            </div>
+            <div class="terminal-input-line">
+                <span class="terminal-prompt">gema@workspace:~$</span>
+                <input 
+                    type="text" 
+                    class="terminal-input" 
+                    id="terminalInput" 
+                    placeholder="Introduce un comando..."
+                    autocomplete="off"
+                >
+            </div>
+        </footer>
+    </div>
+
+    <script src="file-system.js"></script>
+    <script src="terminal.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
